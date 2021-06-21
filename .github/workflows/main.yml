@@ -19,7 +19,6 @@ jobs:
       - name: Install Dependencies
         run: |
           npm i
-          npm i -g electron-packager
       
       - name: Package Electron App
         run: electron-packager ${{ github.workspace }} CableJSClient --platform=win32 --arch=x64 --app-copyright="Copyright (C) 2021 EmeraldSys Media Ltd" --icon="$GITHUB_WORKSPACE/3132702-200.ico" --win32metadata.CompanyName="EmeraldSys Media Limited" --win32metadata.FileDescription="Cable JS Electron Client" --win32metadata.ProductName="Cable JS Electron Client"
