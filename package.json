@@ -1,18 +1,17 @@
 {
   "name": "cablejs-electron",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "CableJS Electron Client",
+  "main": "packager.js",
   "scripts": {
     "start": "electron ."
   },
   "keywords": [],
-  "author": "",
+  "author": "elementemerald",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^13.1.2"
-  },
-  "dependencies": {
+    "electron": "^13.1.2",
     "electron-packager": "^15.2.0"
-  }
+  },
+  "dependencies": {}
 }
