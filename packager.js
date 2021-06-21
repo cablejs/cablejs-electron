@@ -6,7 +6,7 @@ async function main(options) {
 }
 
 main({
-    dir: __dirname + "/electron/",
+    dir: __dirname,
     platform: "win32",
     appCopyright: "Copyright (C) 2021 EmeraldSys Media Ltd",
     win32metadata: {
