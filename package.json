@@ -2,7 +2,7 @@
   "name": "cablejs-electron",
   "version": "1.0.0",
   "description": "CableJS Electron Client",
-  "main": "packager.js",
+  "main": "app.js",
   "scripts": {
     "start": "electron ."
   },

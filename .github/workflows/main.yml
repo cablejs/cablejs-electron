@@ -21,7 +21,7 @@ jobs:
           npm i
       
       - name: Package Electron App
-        run: node .
+        run: node packager.js
 
       - name: Sign Electron App
         run: |
