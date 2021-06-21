@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v2.1.5
+      
+      - name: Install Dependencies
+        run: |
+          npm i
+          npm i -g electron-packager
+      
+      - name: Package Electron App
+        run: electron-packager ${{ github.workspace }} CableJSClient --platform=win32 --arch=x64 --app-copyright="Copyright (C) 2021 EmeraldSys Media Ltd" --icon="$GITHUB_WORKSPACE/3132702-200.ico" --win32metadata.CompanyName="EmeraldSys Media Limited" --win32metadata.FileDescription="Cable JS Electron Client" --win32metadata.ProductName="Cable JS Electron Client"
+
+      - name: Upload Electron App
+        uses: actions/upload-artifact@v2-preview
+        with:
+          name: ${{ github.event.repository.name }}
+          path: CableJSClient-win32-x64/
