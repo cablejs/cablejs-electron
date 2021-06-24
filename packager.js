@@ -7,7 +7,10 @@ async function main(options) {
 
 main({
     dir: __dirname,
-    platform: "win32",
+    platform: [
+        "win32",
+        "linux"
+    ],
     appCopyright: "Copyright (C) 2021 EmeraldSys Media Ltd",
     win32metadata: {
         CompanyName: "EmeraldSys Media Limited",
