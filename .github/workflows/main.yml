@@ -25,7 +25,7 @@ jobs:
 
       - name: Sign Electron App
         run: |
-          & 'C:/Program Files (x86)/Windows Kits/10/bin/10.0.17763.0/x86/signtool.exe' sign /f pfx\emeraldsys_main.pfx /p '${{ secrets.CERTIFICATE_PASS }}' /tr http://timestamp.digicert.com /td sha384 /fd sha384 'cablejs-electron-win32-x64\cablejs-electron.exe'
+          & 'C:/Program Files (x86)/Windows Kits/10/bin/10.0.17763.0/x86/signtool.exe' sign /f pfx\sectigo.pfx /p '${{ secrets.CERTIFICATE_PASS }}' /t http://timestamp.sectigo.com 'cablejs-electron-win32-x64\cablejs-electron.exe'
       
       - name: Upload Electron App
         uses: actions/upload-artifact@v2-preview
